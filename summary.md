@@ -6,21 +6,31 @@
 
 ## Các điều kiện cần để thực hiện dự án trên subdomain được cung cấp bởi cty
 
-1/ Các thông tin cần thiết VPS Server:
+1/ Cấu hình server cần để triển khai ứng dụng:
+
+- CPU: 4–8 nhân (Intel Xeon E-series hoặc AMD Ryzen 5 trở lên)
+- RAM: 16GB (đủ cho ứng dụng web + database, có thể nâng lên 32GB nếu dùng thêm tính năng nâng cao sau này)
+- Ổ cứng: SSD 512GB – 1TB (tùy lượng dữ liệu ban đầu); nếu nhiều file đính kèm, có thể thêm HDD 2TB làm lưu trữ
+- RAID: RAID 1 (nếu cần đảm bảo an toàn dữ liệu và giảm downtime khi lỗi ổ cứng)
+- Mạng LAN: 1Gbps nội bộ (đảm bảo tốc độ truy cập nhanh, ổn định)
+- Hệ điều hành: Ubuntu Server LTS
+- Lưu trữ file dự kiến: 100GB đến 200GB
+
+2/ Các thông tin cần thiết VPS Server:
 
 - Địa chỉ Ipv4 của server
 - Hệ điều hành của server (Ubuntu)
 - Quyền để truy cập vào server (username/password/SSH key)
 
-2/ Cấu hình DNS cho subdomain: Record loại CNAME
+3/ Cấu hình DNS cho subdomain: Record loại CNAME
 
 - Trỏ subdomain cims.ttptelecom.vn và cimsdev.ttptelecom.vn về địa chỉ IP hoặc hosting server
 
-3/ Chuẩn bị lưu lượng ổ cứng để lưu trữ các file upload ảnh của user sau này: (optional)
+4/ Chuẩn bị lưu lượng ổ cứng để lưu trữ các file upload ảnh của user sau này: (optional)
 
 - 1000 user account sẽ ước tính tầm 1.5GB
 
-4/ Mở setting mở các port cần thiết để có thể kết nối
+5/ Mở setting mở các port cần thiết để có thể kết nối
 
 - Port: 22 để client có thể connect tới server
 - Port 443: để có thể config được Nginx và dùng được chứng chỉ SSL
