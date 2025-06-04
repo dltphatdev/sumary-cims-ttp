@@ -1,8 +1,8 @@
 # Bảng Kế Hoạch Dự Án CIMS-TTP
 
-## Môi trường Production cims.ttptelecom.vn
+## Môi trường Production Client: cims.ttptelecom.vn
 
-## Môi trường Development cimsdev.ttptelecom.vn
+## Môi trường Production API Server: api-cims.ttptelecom.vn
 
 ## Các điều kiện cần để thực hiện dự án trên subdomain được cung cấp bởi cty
 
