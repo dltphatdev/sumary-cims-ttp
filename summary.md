@@ -35,6 +35,13 @@
 - Port: 22 để client có thể connect tới server
 - Port 443: để có thể config được Nginx và dùng được chứng chỉ SSL
 
+- GHI CHÚ VỀ PORT 22:
+
+* Cho phép quản trị hệ thống từ xa: Quản trị viên hoặc lập trình viên có thể truy cập vào server để cấu hình, deploy code, sửa lỗi, giám sát dịch vụ.
+* Bảo mật và mã hóa an toàn: SSH mã hóa toàn bộ phiên kết nối (khác với Telnet), nên việc truy cập server nội bộ thông qua SSH là bảo mật.
+* Sử dụng bởi các công cụ DevOps và CI/CD: Các hệ thống như GitLab CI, Jenkins hoặc Ansible cần mở port 22 để tự động SSH vào server và thực hiện các lệnh.
+* Lưu ý khi mở port 22: Chỉ nên mở trong nội bộ hoặc giới hạn IP truy cập để tránh bị tấn công từ bên ngoài (brute force). Sử dụng xác thực bằng key (SSH Key) thay vì password để tăng cường bảo mật. Khi ứng dụng đã chạy ổn định có thể ưu tiên đóng Port 22 để hạn chế việc bị tấn công mã nguồn và bảo mật cho server.
+
 ## Công nghệ sử dụng trong dự án
 
 1/ Backend API: ExpressJS + Typescript
